@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E3D984683E0DFE812EF2B19 /* libPods-FinalApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 420A4EEFA0EDCCA89E59DC8F /* libPods-FinalApp.a */; };
+		E1695D761CC1B2E5007E262F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1695D751CC1B2E5007E262F /* AppDelegate.swift */; };
+		E1695D781CC1B2E5007E262F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1695D771CC1B2E5007E262F /* ViewController.swift */; };
+		E1695D7E1CC1B2E5007E262F /* FinalApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1695D7C1CC1B2E5007E262F /* FinalApp.xcdatamodeld */; };
+		E1695D801CC1B2E5007E262F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1695D7F1CC1B2E5007E262F /* Assets.xcassets */; };
+		E1695D8E1CC1B2E6007E262F /* FinalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1695D8D1CC1B2E6007E262F /* FinalAppTests.swift */; };
+		E1695D991CC1B2E6007E262F /* FinalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1695D981CC1B2E6007E262F /* FinalAppUITests.swift */; };
+		E178A5D11D039785001BA29E /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178A5D01D039785001BA29E /* MusicCollectionViewCell.swift */; };
+		E178B8301D0313090019B47D /* SongDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178B82F1D0313090019B47D /* SongDetailsViewController.swift */; };
+		E178B8321D0322E00019B47D /* SongDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E178B8311D0322E00019B47D /* SongDetails.swift */; };
+		E17F412B1CE2A2610090E04A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17F412A1CE2A2610090E04A /* CategoryTableViewCell.swift */; };
+		E1902E771CE7D4C800B23D1B /* MusicLessonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1902E761CE7D4C800B23D1B /* MusicLessonCollectionViewController.swift */; };
+		E1902E7B1CE7E9FC00B23D1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1902E7A1CE7E9FC00B23D1B /* Main.storyboard */; };
+		E1902E7D1CE7EA3100B23D1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1902E7C1CE7EA3100B23D1B /* LaunchScreen.storyboard */; };
+		E191FA7B1CFAA534002F1648 /* MusicCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FA7A1CFAA534002F1648 /* MusicCategories.swift */; };
+		E191FA7D1CFAD5AF002F1648 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FA7C1CFAD5AF002F1648 /* CoreDataStackManager.swift */; };
+		E191FA7F1CFB55C6002F1648 /* MusicConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FA7E1CFB55C6002F1648 /* MusicConvenience.swift */; };
+		E191FA811CFB55E1002F1648 /* MusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E191FA801CFB55E1002F1648 /* MusicClient.swift */; };
+		E199F1BE1D086DDB00D0EC59 /* SongPlayHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199F1BD1D086DDA00D0EC59 /* SongPlayHistory.swift */; };
+		E199F1C01D0872E500D0EC59 /* SongVideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E199F1BF1D0872E500D0EC59 /* SongVideoPlayerController.swift */; };
+		E1A187001CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A186FA1CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m */; };
+		E1A187011CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A186FC1CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.m */; };
+		E1A187021CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A186FE1CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.m */; };
+		E1A187231CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187041CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.m */; };
+		E1A187241CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187061CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.m */; };
+		E1A187261CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1870A1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.m */; };
+		E1A187271CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1870C1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.m */; };
+		E1A187281CFA19B3005BFC4B /* GTLQueryUserEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1870E1CFA19B3005BFC4B /* GTLQueryUserEndPointApi.m */; };
+		E1A187291CFA19B3005BFC4B /* GTLServiceUserEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187101CFA19B3005BFC4B /* GTLServiceUserEndPointApi.m */; };
+		E1A1872B1CFA19B3005BFC4B /* GTLUserEndPointApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187141CFA19B3005BFC4B /* GTLUserEndPointApiConstants.m */; };
+		E1A1872C1CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187161CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.m */; };
+		E1A1872D1CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187181CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.m */; };
+		E1A1872E1CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1871A1CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.m */; };
+		E1A187301CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A1871E1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m */; };
+		E1A187311CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187201CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.m */; };
+		E1A187321CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187221CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.m */; };
+		E1A187381CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187351CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.m */; };
+		E1A187391CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A187371CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.m */; };
+		E1AE1C551CE26946000DC37F /* MusicCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE1C541CE26946000DC37F /* MusicCategoryViewController.swift */; };
+		E1B659251CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1B659241CC1BEA6009C99C3 /* GoogleService-Info.plist */; };
+		E1B659261CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1B659241CC1BEA6009C99C3 /* GoogleService-Info.plist */; };
+		E1B659271CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1B659241CC1BEA6009C99C3 /* GoogleService-Info.plist */; };
+		E1FE8DDF1CED23D3006A3B65 /* GTLObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DCE1CED23D3006A3B65 /* GTLObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE01CED23D3006A3B65 /* GTLQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DD01CED23D3006A3B65 /* GTLQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE11CED23D3006A3B65 /* GTLBatchQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DD21CED23D3006A3B65 /* GTLBatchQuery.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE21CED23D3006A3B65 /* GTLService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DD41CED23D3006A3B65 /* GTLService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE31CED23D3006A3B65 /* GTLBatchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DD61CED23D3006A3B65 /* GTLBatchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE41CED23D3006A3B65 /* GTLUploadParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DD81CED23D3006A3B65 /* GTLUploadParameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE51CED23D3006A3B65 /* GTLDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DDA1CED23D3006A3B65 /* GTLDateTime.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE61CED23D3006A3B65 /* GTLErrorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DDC1CED23D3006A3B65 /* GTLErrorObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DE71CED23D3006A3B65 /* GTLRuntimeCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DDE1CED23D3006A3B65 /* GTLRuntimeCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DF11CED2479006A3B65 /* GTLFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DE91CED2479006A3B65 /* GTLFramework.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DF21CED2479006A3B65 /* GTLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DEB1CED2479006A3B65 /* GTLJSONParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DF31CED2479006A3B65 /* GTLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DEE1CED2479006A3B65 /* GTLUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DF41CED2479006A3B65 /* GTLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DF01CED2479006A3B65 /* GTLBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1FE8DF71CED259D006A3B65 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DF61CED259D006A3B65 /* GTMSessionFetcher.m */; };
+		E1FE8DFA1CED25AD006A3B65 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FE8DF91CED25AD006A3B65 /* GTMSessionFetcherService.m */; };
+		E1FE8DFC1CED8710006A3B65 /* google_end_points in Resources */ = {isa = PBXBuildFile; fileRef = E1FE8DFB1CED8710006A3B65 /* google_end_points */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1695D8A1CC1B2E6007E262F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1695D6A1CC1B2E5007E262F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1695D711CC1B2E5007E262F;
+			remoteInfo = FinalApp;
+		};
+		E1695D951CC1B2E6007E262F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1695D6A1CC1B2E5007E262F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1695D711CC1B2E5007E262F;
+			remoteInfo = FinalApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16B43971A3BF87B8CC74DFDB /* Pods-FinalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinalApp/Pods-FinalApp.debug.xcconfig"; sourceTree = "<group>"; };
+		420A4EEFA0EDCCA89E59DC8F /* libPods-FinalApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FinalApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7379517EB3602ED8C8228942 /* Pods-FinalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinalApp/Pods-FinalApp.release.xcconfig"; sourceTree = "<group>"; };
+		E145D1031CD4329400A43947 /* FinalApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinalApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1695D721CC1B2E5007E262F /* FinalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1695D751CC1B2E5007E262F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1695D771CC1B2E5007E262F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1695D7D1CC1B2E5007E262F /* FinalApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalApp.xcdatamodel; sourceTree = "<group>"; };
+		E1695D7F1CC1B2E5007E262F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1695D841CC1B2E5007E262F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1695D891CC1B2E6007E262F /* FinalAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1695D8D1CC1B2E6007E262F /* FinalAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalAppTests.swift; sourceTree = "<group>"; };
+		E1695D8F1CC1B2E6007E262F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1695D941CC1B2E6007E262F /* FinalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1695D981CC1B2E6007E262F /* FinalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalAppUITests.swift; sourceTree = "<group>"; };
+		E1695D9A1CC1B2E6007E262F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E178A5D01D039785001BA29E /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
+		E178B82F1D0313090019B47D /* SongDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsViewController.swift; sourceTree = "<group>"; };
+		E178B8311D0322E00019B47D /* SongDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetails.swift; sourceTree = "<group>"; };
+		E17F412A1CE2A2610090E04A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		E1902E761CE7D4C800B23D1B /* MusicLessonCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLessonCollectionViewController.swift; sourceTree = "<group>"; };
+		E1902E7A1CE7E9FC00B23D1B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E1902E7C1CE7EA3100B23D1B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E191FA7A1CFAA534002F1648 /* MusicCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCategories.swift; sourceTree = "<group>"; };
+		E191FA7C1CFAD5AF002F1648 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		E191FA7E1CFB55C6002F1648 /* MusicConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicConvenience.swift; sourceTree = "<group>"; };
+		E191FA801CFB55E1002F1648 /* MusicClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicClient.swift; sourceTree = "<group>"; };
+		E199F1BD1D086DDA00D0EC59 /* SongPlayHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongPlayHistory.swift; sourceTree = "<group>"; };
+		E199F1BF1D0872E500D0EC59 /* SongVideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongVideoPlayerController.swift; sourceTree = "<group>"; };
+		E1A186F81CFA1962005BFC4B /* GTLSongDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongDetailsEndPointApi.h; path = google_end_points/GTLSongDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A186F91CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.h; path = google_end_points/GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.h; sourceTree = "<group>"; };
+		E1A186FA1CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m; path = google_end_points/GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m; sourceTree = "<group>"; };
+		E1A186FB1CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongDetailsEndPointApiConstants.h; path = google_end_points/GTLSongDetailsEndPointApiConstants.h; sourceTree = "<group>"; };
+		E1A186FC1CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongDetailsEndPointApiConstants.m; path = google_end_points/GTLSongDetailsEndPointApiConstants.m; sourceTree = "<group>"; };
+		E1A186FD1CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongDetailsEndPointApiSongDetailsBean.h; path = google_end_points/GTLSongDetailsEndPointApiSongDetailsBean.h; sourceTree = "<group>"; };
+		E1A186FE1CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongDetailsEndPointApiSongDetailsBean.m; path = google_end_points/GTLSongDetailsEndPointApiSongDetailsBean.m; sourceTree = "<group>"; };
+		E1A187031CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLQuerySyncDetailsEndPointApi.h; path = google_end_points/GTLQuerySyncDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A187041CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLQuerySyncDetailsEndPointApi.m; path = google_end_points/GTLQuerySyncDetailsEndPointApi.m; sourceTree = "<group>"; };
+		E1A187051CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLServiceSyncDetailsEndPointApi.h; path = google_end_points/GTLServiceSyncDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A187061CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLServiceSyncDetailsEndPointApi.m; path = google_end_points/GTLServiceSyncDetailsEndPointApi.m; sourceTree = "<group>"; };
+		E1A187081CFA19B3005BFC4B /* GTLSyncDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSyncDetailsEndPointApi.h; path = google_end_points/GTLSyncDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A187091CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSyncDetailsEndPointApiConstants.h; path = google_end_points/GTLSyncDetailsEndPointApiConstants.h; sourceTree = "<group>"; };
+		E1A1870A1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSyncDetailsEndPointApiConstants.m; path = google_end_points/GTLSyncDetailsEndPointApiConstants.m; sourceTree = "<group>"; };
+		E1A1870B1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSyncDetailsEndPointApiSyncDetailsBean.h; path = google_end_points/GTLSyncDetailsEndPointApiSyncDetailsBean.h; sourceTree = "<group>"; };
+		E1A1870C1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSyncDetailsEndPointApiSyncDetailsBean.m; path = google_end_points/GTLSyncDetailsEndPointApiSyncDetailsBean.m; sourceTree = "<group>"; };
+		E1A1870D1CFA19B3005BFC4B /* GTLQueryUserEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLQueryUserEndPointApi.h; path = google_end_points/GTLQueryUserEndPointApi.h; sourceTree = "<group>"; };
+		E1A1870E1CFA19B3005BFC4B /* GTLQueryUserEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLQueryUserEndPointApi.m; path = google_end_points/GTLQueryUserEndPointApi.m; sourceTree = "<group>"; };
+		E1A1870F1CFA19B3005BFC4B /* GTLServiceUserEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLServiceUserEndPointApi.h; path = google_end_points/GTLServiceUserEndPointApi.h; sourceTree = "<group>"; };
+		E1A187101CFA19B3005BFC4B /* GTLServiceUserEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLServiceUserEndPointApi.m; path = google_end_points/GTLServiceUserEndPointApi.m; sourceTree = "<group>"; };
+		E1A187121CFA19B3005BFC4B /* GTLUserEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLUserEndPointApi.h; path = google_end_points/GTLUserEndPointApi.h; sourceTree = "<group>"; };
+		E1A187131CFA19B3005BFC4B /* GTLUserEndPointApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLUserEndPointApiConstants.h; path = google_end_points/GTLUserEndPointApiConstants.h; sourceTree = "<group>"; };
+		E1A187141CFA19B3005BFC4B /* GTLUserEndPointApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLUserEndPointApiConstants.m; path = google_end_points/GTLUserEndPointApiConstants.m; sourceTree = "<group>"; };
+		E1A187151CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLUserEndPointApiUserBean.h; path = google_end_points/GTLUserEndPointApiUserBean.h; sourceTree = "<group>"; };
+		E1A187161CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLUserEndPointApiUserBean.m; path = google_end_points/GTLUserEndPointApiUserBean.m; sourceTree = "<group>"; };
+		E1A187171CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLQuerySongCategoryEndPointApi.h; path = google_end_points/GTLQuerySongCategoryEndPointApi.h; sourceTree = "<group>"; };
+		E1A187181CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLQuerySongCategoryEndPointApi.m; path = google_end_points/GTLQuerySongCategoryEndPointApi.m; sourceTree = "<group>"; };
+		E1A187191CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLServiceSongCategoryEndPointApi.h; path = google_end_points/GTLServiceSongCategoryEndPointApi.h; sourceTree = "<group>"; };
+		E1A1871A1CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLServiceSongCategoryEndPointApi.m; path = google_end_points/GTLServiceSongCategoryEndPointApi.m; sourceTree = "<group>"; };
+		E1A1871C1CFA19B3005BFC4B /* GTLSongCategoryEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongCategoryEndPointApi.h; path = google_end_points/GTLSongCategoryEndPointApi.h; sourceTree = "<group>"; };
+		E1A1871D1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.h; path = google_end_points/GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.h; sourceTree = "<group>"; };
+		E1A1871E1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m; path = google_end_points/GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m; sourceTree = "<group>"; };
+		E1A1871F1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongCategoryEndPointApiConstants.h; path = google_end_points/GTLSongCategoryEndPointApiConstants.h; sourceTree = "<group>"; };
+		E1A187201CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongCategoryEndPointApiConstants.m; path = google_end_points/GTLSongCategoryEndPointApiConstants.m; sourceTree = "<group>"; };
+		E1A187211CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLSongCategoryEndPointApiSongCategoryBean.h; path = google_end_points/GTLSongCategoryEndPointApiSongCategoryBean.h; sourceTree = "<group>"; };
+		E1A187221CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLSongCategoryEndPointApiSongCategoryBean.m; path = google_end_points/GTLSongCategoryEndPointApiSongCategoryBean.m; sourceTree = "<group>"; };
+		E1A187341CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLQuerySongDetailsEndPointApi.h; path = google_end_points/GTLQuerySongDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A187351CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLQuerySongDetailsEndPointApi.m; path = google_end_points/GTLQuerySongDetailsEndPointApi.m; sourceTree = "<group>"; };
+		E1A187361CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLServiceSongDetailsEndPointApi.h; path = google_end_points/GTLServiceSongDetailsEndPointApi.h; sourceTree = "<group>"; };
+		E1A187371CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLServiceSongDetailsEndPointApi.m; path = google_end_points/GTLServiceSongDetailsEndPointApi.m; sourceTree = "<group>"; };
+		E1AE1C541CE26946000DC37F /* MusicCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicCategoryViewController.swift; sourceTree = "<group>"; };
+		E1B659241CC1BEA6009C99C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1FE8DCC1CED2270006A3B65 /* GTLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDefines.h; sourceTree = "<group>"; };
+		E1FE8DCD1CED23D3006A3B65 /* GTLObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLObject.h; sourceTree = "<group>"; };
+		E1FE8DCE1CED23D3006A3B65 /* GTLObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLObject.m; sourceTree = "<group>"; };
+		E1FE8DCF1CED23D3006A3B65 /* GTLQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLQuery.h; sourceTree = "<group>"; };
+		E1FE8DD01CED23D3006A3B65 /* GTLQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLQuery.m; sourceTree = "<group>"; };
+		E1FE8DD11CED23D3006A3B65 /* GTLBatchQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchQuery.h; sourceTree = "<group>"; };
+		E1FE8DD21CED23D3006A3B65 /* GTLBatchQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchQuery.m; sourceTree = "<group>"; };
+		E1FE8DD31CED23D3006A3B65 /* GTLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLService.h; sourceTree = "<group>"; };
+		E1FE8DD41CED23D3006A3B65 /* GTLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLService.m; sourceTree = "<group>"; };
+		E1FE8DD51CED23D3006A3B65 /* GTLBatchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBatchResult.h; sourceTree = "<group>"; };
+		E1FE8DD61CED23D3006A3B65 /* GTLBatchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBatchResult.m; sourceTree = "<group>"; };
+		E1FE8DD71CED23D3006A3B65 /* GTLUploadParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUploadParameters.h; sourceTree = "<group>"; };
+		E1FE8DD81CED23D3006A3B65 /* GTLUploadParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUploadParameters.m; sourceTree = "<group>"; };
+		E1FE8DD91CED23D3006A3B65 /* GTLDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLDateTime.h; sourceTree = "<group>"; };
+		E1FE8DDA1CED23D3006A3B65 /* GTLDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLDateTime.m; sourceTree = "<group>"; };
+		E1FE8DDB1CED23D3006A3B65 /* GTLErrorObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLErrorObject.h; sourceTree = "<group>"; };
+		E1FE8DDC1CED23D3006A3B65 /* GTLErrorObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLErrorObject.m; sourceTree = "<group>"; };
+		E1FE8DDD1CED23D3006A3B65 /* GTLRuntimeCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLRuntimeCommon.h; sourceTree = "<group>"; };
+		E1FE8DDE1CED23D3006A3B65 /* GTLRuntimeCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLRuntimeCommon.m; sourceTree = "<group>"; };
+		E1FE8DE81CED2479006A3B65 /* GTLFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLFramework.h; sourceTree = "<group>"; };
+		E1FE8DE91CED2479006A3B65 /* GTLFramework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLFramework.m; sourceTree = "<group>"; };
+		E1FE8DEA1CED2479006A3B65 /* GTLJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLJSONParser.h; sourceTree = "<group>"; };
+		E1FE8DEB1CED2479006A3B65 /* GTLJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLJSONParser.m; sourceTree = "<group>"; };
+		E1FE8DEC1CED2479006A3B65 /* GTLTargetNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLTargetNamespace.h; sourceTree = "<group>"; };
+		E1FE8DED1CED2479006A3B65 /* GTLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLUtilities.h; sourceTree = "<group>"; };
+		E1FE8DEE1CED2479006A3B65 /* GTLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLUtilities.m; sourceTree = "<group>"; };
+		E1FE8DEF1CED2479006A3B65 /* GTLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLBase64.h; sourceTree = "<group>"; };
+		E1FE8DF01CED2479006A3B65 /* GTLBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLBase64.m; sourceTree = "<group>"; };
+		E1FE8DF51CED259D006A3B65 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSessionFetcher.h; sourceTree = "<group>"; };
+		E1FE8DF61CED259D006A3B65 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSessionFetcher.m; sourceTree = "<group>"; };
+		E1FE8DF81CED25AD006A3B65 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSessionFetcherService.h; sourceTree = "<group>"; };
+		E1FE8DF91CED25AD006A3B65 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		E1FE8DFB1CED8710006A3B65 /* google_end_points */ = {isa = PBXFileReference; lastKnownFileType = folder; name = google_end_points; path = /Users/jburugul/Desktop/SwiftProjects/FinalApp/FinalApp/google_end_points; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1695D6F1CC1B2E5007E262F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3D984683E0DFE812EF2B19 /* libPods-FinalApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D861CC1B2E6007E262F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D911CC1B2E6007E262F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD0A766DA048D06A3D27EDC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16B43971A3BF87B8CC74DFDB /* Pods-FinalApp.debug.xcconfig */,
+				7379517EB3602ED8C8228942 /* Pods-FinalApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E1695D691CC1B2E5007E262F = {
+			isa = PBXGroup;
+			children = (
+				E1B659241CC1BEA6009C99C3 /* GoogleService-Info.plist */,
+				E1695D741CC1B2E5007E262F /* FinalApp */,
+				E1695D8C1CC1B2E6007E262F /* FinalAppTests */,
+				E1695D971CC1B2E6007E262F /* FinalAppUITests */,
+				E1695D731CC1B2E5007E262F /* Products */,
+				FBD6F22D5C76CB38827FBD7E /* Frameworks */,
+				BD0A766DA048D06A3D27EDC5 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		E1695D731CC1B2E5007E262F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1695D721CC1B2E5007E262F /* FinalApp.app */,
+				E1695D891CC1B2E6007E262F /* FinalAppTests.xctest */,
+				E1695D941CC1B2E6007E262F /* FinalAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1695D741CC1B2E5007E262F /* FinalApp */ = {
+			isa = PBXGroup;
+			children = (
+				E1A187331CFA19C3005BFC4B /* google_end_points */,
+				E187B8951CF5252100FD137F /* GTL-ServiceGenerator */,
+				E1902E7C1CE7EA3100B23D1B /* LaunchScreen.storyboard */,
+				E1902E7A1CE7E9FC00B23D1B /* Main.storyboard */,
+				E178B82F1D0313090019B47D /* SongDetailsViewController.swift */,
+				E199F1BF1D0872E500D0EC59 /* SongVideoPlayerController.swift */,
+				E1695D751CC1B2E5007E262F /* AppDelegate.swift */,
+				E1695D771CC1B2E5007E262F /* ViewController.swift */,
+				E1695D7F1CC1B2E5007E262F /* Assets.xcassets */,
+				E1695D841CC1B2E5007E262F /* Info.plist */,
+				E1695D7C1CC1B2E5007E262F /* FinalApp.xcdatamodeld */,
+				E145D1031CD4329400A43947 /* FinalApp-Bridging-Header.h */,
+				E1AE1C541CE26946000DC37F /* MusicCategoryViewController.swift */,
+				E17F412A1CE2A2610090E04A /* CategoryTableViewCell.swift */,
+				E1902E761CE7D4C800B23D1B /* MusicLessonCollectionViewController.swift */,
+				E178A5D01D039785001BA29E /* MusicCollectionViewCell.swift */,
+				E191FA7A1CFAA534002F1648 /* MusicCategories.swift */,
+				E178B8311D0322E00019B47D /* SongDetails.swift */,
+				E191FA7C1CFAD5AF002F1648 /* CoreDataStackManager.swift */,
+				E191FA7E1CFB55C6002F1648 /* MusicConvenience.swift */,
+				E191FA801CFB55E1002F1648 /* MusicClient.swift */,
+				E199F1BD1D086DDA00D0EC59 /* SongPlayHistory.swift */,
+			);
+			path = FinalApp;
+			sourceTree = "<group>";
+		};
+		E1695D8C1CC1B2E6007E262F /* FinalAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E1695D8D1CC1B2E6007E262F /* FinalAppTests.swift */,
+				E1695D8F1CC1B2E6007E262F /* Info.plist */,
+			);
+			path = FinalAppTests;
+			sourceTree = "<group>";
+		};
+		E1695D971CC1B2E6007E262F /* FinalAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E1695D981CC1B2E6007E262F /* FinalAppUITests.swift */,
+				E1695D9A1CC1B2E6007E262F /* Info.plist */,
+			);
+			path = FinalAppUITests;
+			sourceTree = "<group>";
+		};
+		E187B8951CF5252100FD137F /* GTL-ServiceGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E1FE8DCC1CED2270006A3B65 /* GTLDefines.h */,
+				E1FE8DF51CED259D006A3B65 /* GTMSessionFetcher.h */,
+				E1FE8DF61CED259D006A3B65 /* GTMSessionFetcher.m */,
+				E1FE8DF81CED25AD006A3B65 /* GTMSessionFetcherService.h */,
+				E1FE8DF91CED25AD006A3B65 /* GTMSessionFetcherService.m */,
+				E1FE8DCD1CED23D3006A3B65 /* GTLObject.h */,
+				E1FE8DCE1CED23D3006A3B65 /* GTLObject.m */,
+				E1FE8DCF1CED23D3006A3B65 /* GTLQuery.h */,
+				E1FE8DD01CED23D3006A3B65 /* GTLQuery.m */,
+				E1FE8DD11CED23D3006A3B65 /* GTLBatchQuery.h */,
+				E1FE8DD21CED23D3006A3B65 /* GTLBatchQuery.m */,
+				E1FE8DD31CED23D3006A3B65 /* GTLService.h */,
+				E1FE8DD41CED23D3006A3B65 /* GTLService.m */,
+				E1FE8DD51CED23D3006A3B65 /* GTLBatchResult.h */,
+				E1FE8DD61CED23D3006A3B65 /* GTLBatchResult.m */,
+				E1FE8DD71CED23D3006A3B65 /* GTLUploadParameters.h */,
+				E1FE8DD81CED23D3006A3B65 /* GTLUploadParameters.m */,
+				E1FE8DD91CED23D3006A3B65 /* GTLDateTime.h */,
+				E1FE8DDA1CED23D3006A3B65 /* GTLDateTime.m */,
+				E1FE8DDB1CED23D3006A3B65 /* GTLErrorObject.h */,
+				E1FE8DDC1CED23D3006A3B65 /* GTLErrorObject.m */,
+				E1FE8DDD1CED23D3006A3B65 /* GTLRuntimeCommon.h */,
+				E1FE8DDE1CED23D3006A3B65 /* GTLRuntimeCommon.m */,
+				E1FE8DE81CED2479006A3B65 /* GTLFramework.h */,
+				E1FE8DE91CED2479006A3B65 /* GTLFramework.m */,
+				E1FE8DEA1CED2479006A3B65 /* GTLJSONParser.h */,
+				E1FE8DEB1CED2479006A3B65 /* GTLJSONParser.m */,
+				E1FE8DEC1CED2479006A3B65 /* GTLTargetNamespace.h */,
+				E1FE8DED1CED2479006A3B65 /* GTLUtilities.h */,
+				E1FE8DEE1CED2479006A3B65 /* GTLUtilities.m */,
+				E1FE8DEF1CED2479006A3B65 /* GTLBase64.h */,
+				E1FE8DF01CED2479006A3B65 /* GTLBase64.m */,
+			);
+			name = "GTL-ServiceGenerator";
+			sourceTree = "<group>";
+		};
+		E1A187331CFA19C3005BFC4B /* google_end_points */ = {
+			isa = PBXGroup;
+			children = (
+				E1A187341CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.h */,
+				E1A187351CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.m */,
+				E1A187361CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.h */,
+				E1A187371CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.m */,
+				E1A187031CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.h */,
+				E1A187041CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.m */,
+				E1A187051CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.h */,
+				E1A187061CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.m */,
+				E1A187081CFA19B3005BFC4B /* GTLSyncDetailsEndPointApi.h */,
+				E1A187091CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.h */,
+				E1A1870A1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.m */,
+				E1A1870B1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.h */,
+				E1A1870C1CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.m */,
+				E1A1870D1CFA19B3005BFC4B /* GTLQueryUserEndPointApi.h */,
+				E1A1870E1CFA19B3005BFC4B /* GTLQueryUserEndPointApi.m */,
+				E1A1870F1CFA19B3005BFC4B /* GTLServiceUserEndPointApi.h */,
+				E1A187101CFA19B3005BFC4B /* GTLServiceUserEndPointApi.m */,
+				E1A187121CFA19B3005BFC4B /* GTLUserEndPointApi.h */,
+				E1A187131CFA19B3005BFC4B /* GTLUserEndPointApiConstants.h */,
+				E1A187141CFA19B3005BFC4B /* GTLUserEndPointApiConstants.m */,
+				E1A187151CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.h */,
+				E1A187161CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.m */,
+				E1A187171CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.h */,
+				E1A187181CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.m */,
+				E1A187191CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.h */,
+				E1A1871A1CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.m */,
+				E1A1871C1CFA19B3005BFC4B /* GTLSongCategoryEndPointApi.h */,
+				E1A1871D1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.h */,
+				E1A1871E1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m */,
+				E1A1871F1CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.h */,
+				E1A187201CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.m */,
+				E1A187211CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.h */,
+				E1A187221CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.m */,
+				E1A186F81CFA1962005BFC4B /* GTLSongDetailsEndPointApi.h */,
+				E1A186F91CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.h */,
+				E1A186FA1CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m */,
+				E1A186FB1CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.h */,
+				E1A186FC1CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.m */,
+				E1A186FD1CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.h */,
+				E1A186FE1CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.m */,
+			);
+			name = google_end_points;
+			sourceTree = "<group>";
+		};
+		FBD6F22D5C76CB38827FBD7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				420A4EEFA0EDCCA89E59DC8F /* libPods-FinalApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1695D711CC1B2E5007E262F /* FinalApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1695D9D1CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalApp" */;
+			buildPhases = (
+				3CE5FDA13977C8DA0B32E4A7 /* Check Pods Manifest.lock */,
+				E1695D6E1CC1B2E5007E262F /* Sources */,
+				E1695D6F1CC1B2E5007E262F /* Frameworks */,
+				E1695D701CC1B2E5007E262F /* Resources */,
+				BF34BB78940CF7451E3E689A /* Embed Pods Frameworks */,
+				EE7F33CE6AAE36F3838273FA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinalApp;
+			productName = FinalApp;
+			productReference = E1695D721CC1B2E5007E262F /* FinalApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1695D881CC1B2E6007E262F /* FinalAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1695DA01CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalAppTests" */;
+			buildPhases = (
+				E1695D851CC1B2E6007E262F /* Sources */,
+				E1695D861CC1B2E6007E262F /* Frameworks */,
+				E1695D871CC1B2E6007E262F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1695D8B1CC1B2E6007E262F /* PBXTargetDependency */,
+			);
+			name = FinalAppTests;
+			productName = FinalAppTests;
+			productReference = E1695D891CC1B2E6007E262F /* FinalAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E1695D931CC1B2E6007E262F /* FinalAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1695DA31CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalAppUITests" */;
+			buildPhases = (
+				E1695D901CC1B2E6007E262F /* Sources */,
+				E1695D911CC1B2E6007E262F /* Frameworks */,
+				E1695D921CC1B2E6007E262F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1695D961CC1B2E6007E262F /* PBXTargetDependency */,
+			);
+			name = FinalAppUITests;
+			productName = FinalAppUITests;
+			productReference = E1695D941CC1B2E6007E262F /* FinalAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1695D6A1CC1B2E5007E262F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = janaki;
+				TargetAttributes = {
+					E1695D711CC1B2E5007E262F = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = U8WU2R28WG;
+					};
+					E1695D881CC1B2E6007E262F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E1695D711CC1B2E5007E262F;
+					};
+					E1695D931CC1B2E6007E262F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E1695D711CC1B2E5007E262F;
+					};
+				};
+			};
+			buildConfigurationList = E1695D6D1CC1B2E5007E262F /* Build configuration list for PBXProject "FinalApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1695D691CC1B2E5007E262F;
+			productRefGroup = E1695D731CC1B2E5007E262F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1695D711CC1B2E5007E262F /* FinalApp */,
+				E1695D881CC1B2E6007E262F /* FinalAppTests */,
+				E1695D931CC1B2E6007E262F /* FinalAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1695D701CC1B2E5007E262F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B659251CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */,
+				E1695D801CC1B2E5007E262F /* Assets.xcassets in Resources */,
+				E1FE8DFC1CED8710006A3B65 /* google_end_points in Resources */,
+				E1902E7D1CE7EA3100B23D1B /* LaunchScreen.storyboard in Resources */,
+				E1902E7B1CE7E9FC00B23D1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D871CC1B2E6007E262F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B659261CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D921CC1B2E6007E262F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B659271CC1BEA6009C99C3 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE5FDA13977C8DA0B32E4A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF34BB78940CF7451E3E689A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalApp/Pods-FinalApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7F33CE6AAE36F3838273FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinalApp/Pods-FinalApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1695D6E1CC1B2E5007E262F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FE8DE41CED23D3006A3B65 /* GTLUploadParameters.m in Sources */,
+				E1902E771CE7D4C800B23D1B /* MusicLessonCollectionViewController.swift in Sources */,
+				E1FE8DF31CED2479006A3B65 /* GTLUtilities.m in Sources */,
+				E191FA811CFB55E1002F1648 /* MusicClient.swift in Sources */,
+				E1FE8DE11CED23D3006A3B65 /* GTLBatchQuery.m in Sources */,
+				E1FE8DF21CED2479006A3B65 /* GTLJSONParser.m in Sources */,
+				E17F412B1CE2A2610090E04A /* CategoryTableViewCell.swift in Sources */,
+				E178B8321D0322E00019B47D /* SongDetails.swift in Sources */,
+				E1A187281CFA19B3005BFC4B /* GTLQueryUserEndPointApi.m in Sources */,
+				E1A187291CFA19B3005BFC4B /* GTLServiceUserEndPointApi.m in Sources */,
+				E1A187231CFA19B3005BFC4B /* GTLQuerySyncDetailsEndPointApi.m in Sources */,
+				E1FE8DE51CED23D3006A3B65 /* GTLDateTime.m in Sources */,
+				E1FE8DE31CED23D3006A3B65 /* GTLBatchResult.m in Sources */,
+				E1A1872B1CFA19B3005BFC4B /* GTLUserEndPointApiConstants.m in Sources */,
+				E1FE8DE21CED23D3006A3B65 /* GTLService.m in Sources */,
+				E1FE8DE61CED23D3006A3B65 /* GTLErrorObject.m in Sources */,
+				E1A187011CFA1962005BFC4B /* GTLSongDetailsEndPointApiConstants.m in Sources */,
+				E178B8301D0313090019B47D /* SongDetailsViewController.swift in Sources */,
+				E1FE8DE01CED23D3006A3B65 /* GTLQuery.m in Sources */,
+				E1FE8DF71CED259D006A3B65 /* GTMSessionFetcher.m in Sources */,
+				E199F1C01D0872E500D0EC59 /* SongVideoPlayerController.swift in Sources */,
+				E191FA7B1CFAA534002F1648 /* MusicCategories.swift in Sources */,
+				E1A187001CFA1962005BFC4B /* GTLSongDetailsEndPointApiCollectionResponseSongDetailsBean.m in Sources */,
+				E1A187321CFA19B3005BFC4B /* GTLSongCategoryEndPointApiSongCategoryBean.m in Sources */,
+				E1A187271CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiSyncDetailsBean.m in Sources */,
+				E191FA7F1CFB55C6002F1648 /* MusicConvenience.swift in Sources */,
+				E1FE8DF41CED2479006A3B65 /* GTLBase64.m in Sources */,
+				E1FE8DDF1CED23D3006A3B65 /* GTLObject.m in Sources */,
+				E1A187261CFA19B3005BFC4B /* GTLSyncDetailsEndPointApiConstants.m in Sources */,
+				E1FE8DE71CED23D3006A3B65 /* GTLRuntimeCommon.m in Sources */,
+				E1A1872E1CFA19B3005BFC4B /* GTLServiceSongCategoryEndPointApi.m in Sources */,
+				E1695D781CC1B2E5007E262F /* ViewController.swift in Sources */,
+				E199F1BE1D086DDB00D0EC59 /* SongPlayHistory.swift in Sources */,
+				E1A187381CFA1A80005BFC4B /* GTLQuerySongDetailsEndPointApi.m in Sources */,
+				E191FA7D1CFAD5AF002F1648 /* CoreDataStackManager.swift in Sources */,
+				E1695D7E1CC1B2E5007E262F /* FinalApp.xcdatamodeld in Sources */,
+				E1A187021CFA1962005BFC4B /* GTLSongDetailsEndPointApiSongDetailsBean.m in Sources */,
+				E1FE8DFA1CED25AD006A3B65 /* GTMSessionFetcherService.m in Sources */,
+				E1A187301CFA19B3005BFC4B /* GTLSongCategoryEndPointApiCollectionResponseSongCategoryBean.m in Sources */,
+				E1A187241CFA19B3005BFC4B /* GTLServiceSyncDetailsEndPointApi.m in Sources */,
+				E1AE1C551CE26946000DC37F /* MusicCategoryViewController.swift in Sources */,
+				E1A1872C1CFA19B3005BFC4B /* GTLUserEndPointApiUserBean.m in Sources */,
+				E1A187311CFA19B3005BFC4B /* GTLSongCategoryEndPointApiConstants.m in Sources */,
+				E1A187391CFA1A80005BFC4B /* GTLServiceSongDetailsEndPointApi.m in Sources */,
+				E1FE8DF11CED2479006A3B65 /* GTLFramework.m in Sources */,
+				E1695D761CC1B2E5007E262F /* AppDelegate.swift in Sources */,
+				E1A1872D1CFA19B3005BFC4B /* GTLQuerySongCategoryEndPointApi.m in Sources */,
+				E178A5D11D039785001BA29E /* MusicCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D851CC1B2E6007E262F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1695D8E1CC1B2E6007E262F /* FinalAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1695D901CC1B2E6007E262F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1695D991CC1B2E6007E262F /* FinalAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1695D8B1CC1B2E6007E262F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1695D711CC1B2E5007E262F /* FinalApp */;
+			targetProxy = E1695D8A1CC1B2E6007E262F /* PBXContainerItemProxy */;
+		};
+		E1695D961CC1B2E6007E262F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1695D711CC1B2E5007E262F /* FinalApp */;
+			targetProxy = E1695D951CC1B2E6007E262F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E1695D9B1CC1B2E6007E262F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1695D9C1CC1B2E6007E262F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1695D9E1CC1B2E6007E262F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B43971A3BF87B8CC74DFDB /* Pods-FinalApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FinalApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalApp/FinalApp-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		E1695D9F1CC1B2E6007E262F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7379517EB3602ED8C8228942 /* Pods-FinalApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = FinalApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "FinalApp/FinalApp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		E1695DA11CC1B2E6007E262F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FinalAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalApp.app/FinalApp";
+			};
+			name = Debug;
+		};
+		E1695DA21CC1B2E6007E262F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FinalAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinalApp.app/FinalApp";
+			};
+			name = Release;
+		};
+		E1695DA41CC1B2E6007E262F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FinalAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FinalApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E1695DA51CC1B2E6007E262F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FinalAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.janaki.FinalAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FinalApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1695D6D1CC1B2E5007E262F /* Build configuration list for PBXProject "FinalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1695D9B1CC1B2E6007E262F /* Debug */,
+				E1695D9C1CC1B2E6007E262F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1695D9D1CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1695D9E1CC1B2E6007E262F /* Debug */,
+				E1695D9F1CC1B2E6007E262F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1695DA01CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1695DA11CC1B2E6007E262F /* Debug */,
+				E1695DA21CC1B2E6007E262F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1695DA31CC1B2E6007E262F /* Build configuration list for PBXNativeTarget "FinalAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1695DA41CC1B2E6007E262F /* Debug */,
+				E1695DA51CC1B2E6007E262F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1695D7C1CC1B2E5007E262F /* FinalApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1695D7D1CC1B2E5007E262F /* FinalApp.xcdatamodel */,
+			);
+			currentVersion = E1695D7D1CC1B2E5007E262F /* FinalApp.xcdatamodel */;
+			path = FinalApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E1695D6A1CC1B2E5007E262F /* Project object */;
+}

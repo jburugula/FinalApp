@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1509" minimumToolsVersion="Automatic">
+    <entity name="MusicCategories" representedClassName="MusicCategories" syncable="YES">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="songs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SongDetails" inverseName="categories" inverseEntity="SongDetails" syncable="YES"/>
+    </entity>
+    <entity name="SongDetails" representedClassName="SongDetails" syncable="YES">
+        <attribute name="aarohana" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avarohana" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pictureUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ragam" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MusicCategories" inverseName="songs" inverseEntity="MusicCategories" syncable="YES"/>
+    </entity>
+    <entity name="SongPlayHistory" representedClassName="SongPlayHistory" syncable="YES">
+        <attribute name="lastViewed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playedTime" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="songId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MusicCategories" positionX="-54" positionY="18" width="128" height="135"/>
+        <element name="SongDetails" positionX="-36" positionY="54" width="128" height="240"/>
+        <element name="SongPlayHistory" positionX="-63" positionY="-18" width="128" height="105"/>
+    </elements>
+</model>
