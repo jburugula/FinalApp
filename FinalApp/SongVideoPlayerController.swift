@@ -55,8 +55,6 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
         songPlayHistory[SongPlayHistory.Keys.userId] = NSNumber(longLong:currentUserId )
         songPlayHistory[SongPlayHistory.Keys.songId] = NSNumber(longLong:currentSongId)
         
-        
-        
         _ = SongPlayHistory(dictionary: songPlayHistory, context: self.sharedContext)
         self.saveContext()
         
@@ -64,12 +62,13 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
         
     }
     
+    
     // Once the video play is done, save the video play time history for later use
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         savePlayHistory()
-        
+             
         }
     
 }

@@ -40,6 +40,7 @@ class SongDetailsViewController: UIViewController  {
     @IBAction func playVideo(sender: AnyObject) {
         
         
+        
         let songDetailVC = storyboard?.instantiateViewControllerWithIdentifier("lessonVideo") as! SongVideoPlayerController
         
         let url:NSURL = NSURL(string: videoUrl)!
@@ -52,8 +53,9 @@ class SongDetailsViewController: UIViewController  {
         
         songDetailVC.player?.seekToTime(startTime)
         
-        self.presentViewController(songDetailVC, animated: true){
-            songDetailVC.player!.play() }
+       self.presentViewController(songDetailVC, animated: true){
+         songDetailVC.player!.play() }
+      
         
         
     }

@@ -33,21 +33,21 @@
                                 </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlL-q8-47N" customClass="GIDSignInButton">
-                                <rect key="frame" x="63" y="286" width="175" height="44"/>
+                                <rect key="frame" x="63" y="275" width="175" height="55"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="BZW-Ad-rTR"/>
+                                    <constraint firstAttribute="height" constant="55" id="BZW-Ad-rTR"/>
                                     <constraint firstAttribute="width" constant="175" id="Vg8-KB-S8w"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-hm-jBA">
-                                <rect key="frame" x="72" y="25" width="157" height="61"/>
+                                <rect key="frame" x="42" y="25" width="216" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="gLq-R8-fM5"/>
+                                    <constraint firstAttribute="height" constant="81" id="gLq-R8-fM5"/>
                                 </constraints>
                                 <string key="text">Welcome To Music 
 Learning App</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,7 +93,7 @@ Learning App</string>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-Z6-L8Y">
                                             <rect key="frame" x="32" y="8" width="219" height="28"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
