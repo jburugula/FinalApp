@@ -188,7 +188,7 @@
 		E1FE8DF61CED259D006A3B65 /* GTMSessionFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSessionFetcher.m; sourceTree = "<group>"; };
 		E1FE8DF81CED25AD006A3B65 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSessionFetcherService.h; sourceTree = "<group>"; };
 		E1FE8DF91CED25AD006A3B65 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSessionFetcherService.m; sourceTree = "<group>"; };
-		E1FE8DFB1CED8710006A3B65 /* google_end_points */ = {isa = PBXFileReference; lastKnownFileType = folder; name = google_end_points; path = /Users/jburugul/Desktop/SwiftProjects/FinalApp/FinalApp/google_end_points; sourceTree = "<absolute>"; };
+		E1FE8DFB1CED8710006A3B65 /* google_end_points */ = {isa = PBXFileReference; lastKnownFileType = folder; name = google_end_points; path = FinalApp/google_end_points; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
