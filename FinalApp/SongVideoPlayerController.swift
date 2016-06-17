@@ -22,6 +22,17 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add UI slider to the view to control volume settings
+        
+        let volumeSlider = UISlider(frame:CGRectMake(20, 70,400, 20))
+        volumeSlider.minimumValue = 0
+        volumeSlider.maximumValue = 100
+        volumeSlider.continuous = true
+        volumeSlider.tintColor = UIColor.redColor()
+        volumeSlider.value = 20
+        volumeSlider.addTarget(self, action: #selector(SongVideoPlayerController.sliderValueDidChange(_:)), forControlEvents: .ValueChanged)
+        self.view.addSubview(volumeSlider)
     }
     
     var sharedContext: NSManagedObjectContext {
@@ -45,9 +56,9 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
         
         
         var songPlayHistory =  [String : AnyObject]()
-       
+        
         let currentplayedTime: Double = CMTimeGetSeconds((self.player?.currentTime())!)
-       
+        
         
         songPlayHistory[SongPlayHistory.Keys.playedTime] = currentplayedTime
         songPlayHistory[SongPlayHistory.Keys.lastViewed] = todayDate
@@ -67,7 +78,17 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         savePlayHistory()
-             
-        }
+        
+    }
+    func sliderValueDidChange(sender: UISlider) {
+        
+        self.player!.volume = sender.value;
+        
+        
+    }
+    
+    
+    
+    
     
 }

@@ -25,12 +25,7 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let signOutButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Plain, target: self, action:#selector(MusicCategoryViewController.didTapSignOut(_:)) )
-        
-        self.navigationItem.rightBarButtonItem = signOutButton
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-
+      
         
         do {
             try fetchedResultsController.performFetch()
@@ -50,6 +45,18 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
             
         }
         
+   //  Add Signout button to the navigation bar
+        
+        let signOutButton = UIBarButtonItem(
+            title: "Signout",
+            style: .Plain,
+            target: self,
+            action: #selector(MusicCategoryViewController.didTapDisconnect(_:))
+        )
+        self.navigationItem.rightBarButtonItem = signOutButton
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -79,7 +86,6 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
         let songCategories = fetchedResultsController.objectAtIndexPath(indexPath) as! MusicCategories
         
         cell.nameLabel.text = songCategories.categoryName
-        cell.backgroundColor = UIColor.blackColor()
         cell.activityIndicator.hidden = true
         cell.activityIndicator.stopAnimating()
         
@@ -239,12 +245,10 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
     
     // Sign out the User
     
-    func didTapSignOut(sender: UIBarButtonItem) {
-        GIDSignIn.sharedInstance().signOut()
-        let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
-        let logInPageNav =  UINavigationController(rootViewController: logInPage)
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.window?.rootViewController = logInPageNav
+    func didTapDisconnect(sender: UIBarButtonItem) {
+        
+         GIDSignIn.sharedInstance().disconnect()
+        
     }
     
 }

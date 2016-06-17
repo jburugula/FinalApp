@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinalApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FinalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -91,20 +91,24 @@ Learning App</string>
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-Z6-L8Y">
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-bH-6yW">
+                                            <rect key="frame" x="140" y="12" width="20" height="20"/>
+                                            <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPF-Z6-L8Y">
                                             <rect key="frame" x="32" y="8" width="219" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-bH-6yW">
-                                            <rect key="frame" x="78" y="25" width="0.0" height="0.0"/>
-                                            <color key="color" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fh6-bH-6yW" firstAttribute="width" secondItem="BPF-Z6-L8Y" secondAttribute="width" id="2jw-7h-izd"/>
-                                        <constraint firstItem="fh6-bH-6yW" firstAttribute="height" secondItem="BPF-Z6-L8Y" secondAttribute="height" id="83p-Cf-pfP"/>
+                                        <constraint firstItem="fh6-bH-6yW" firstAttribute="centerX" secondItem="0mJ-lU-Lpq" secondAttribute="centerX" id="6YJ-7t-8DJ"/>
+                                        <constraint firstItem="fh6-bH-6yW" firstAttribute="centerY" secondItem="0mJ-lU-Lpq" secondAttribute="centerY" id="PDI-Ap-4A1"/>
+                                        <constraint firstItem="BPF-Z6-L8Y" firstAttribute="leading" secondItem="0mJ-lU-Lpq" secondAttribute="leadingMargin" constant="24" id="fW6-nG-Wm0"/>
+                                        <constraint firstItem="BPF-Z6-L8Y" firstAttribute="top" secondItem="0mJ-lU-Lpq" secondAttribute="topMargin" id="uF3-np-0UU"/>
+                                        <constraint firstItem="BPF-Z6-L8Y" firstAttribute="centerY" secondItem="0mJ-lU-Lpq" secondAttribute="centerY" id="uOW-Am-hbP"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="BPF-Z6-L8Y" secondAttribute="trailing" constant="41" id="wJ8-IS-JeH"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

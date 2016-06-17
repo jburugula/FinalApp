@@ -66,6 +66,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         withError error: NSError!) {
             // Perform any operations when the user disconnects from app here.
             // ...
+        let myStoryBoard:UIStoryboard = UIStoryboard(name:"Main",bundle:nil)
+        let loginVC = myStoryBoard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        
+      //  loginVC.userId = userId.longLongValue
+        let navigationController = UINavigationController(rootViewController: loginVC)
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.rootViewController = navigationController
+        
     }
     
     /*  End Google Sign in .... */
