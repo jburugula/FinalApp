@@ -68,5 +68,34 @@ extension MusicClient {
         
     }
     
+    //  Get image for the image URL
     
+    func getPictureForImageUrl(pictureURL : String,completionHandler: (picture: AnyObject?, error: String?) -> Void) {
+        
+        let fileURL =   NSURL(string: pictureURL)!
+        
+        let request: NSURLRequest = NSURLRequest(URL: fileURL)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+            
+            if let _ = error {
+                completionHandler(picture: nil, error: "There is an error fetching image . Please Check")
+                
+            } else {
+                
+                if let picture = UIImage(data: data!)
+                {
+                    
+                    completionHandler(picture: picture, error: nil)
+                    
+                }
+                else{
+                    completionHandler(picture: nil, error: "There is an error fetching image . Please Check")
+                }
+            }
+        }
+        
+        task.resume()
+        
+    }
 }

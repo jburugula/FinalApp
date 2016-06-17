@@ -112,7 +112,7 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
         // If this image is already cached, don't re-download
         
         let pictureUrlString: NSString = songs.pictureUrl
-        var picture: UIImage? = self.imageCache.valueForKey(pictureUrlString as String) as? UIImage
+        let picture: UIImage? = self.imageCache.valueForKey(pictureUrlString as String) as? UIImage
         
         if picture != nil {
             cell.imageView.image = picture
@@ -120,25 +120,21 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
             cell.activityIndicator.stopAnimating()
             cell.imageView.alpha = 0.0
             UIView.animateWithDuration(0.2,
-                animations: { cell.imageView.alpha = 1.0 })
+                                       animations: { cell.imageView.alpha = 1.0 })
         }
         else {
             // The image isn't cached, download the img data
             // We should perform this in a background thread
-            let fileURL =   NSURL(string: songs.pictureUrl)!
             
-            let request: NSURLRequest = NSURLRequest(URL: fileURL)
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+            MusicClient.sharedInstance().getPictureForImageUrl(songs.pictureUrl, completionHandler: { (picture, error) in
                 
-                if error == nil {
-                    // Convert the downloaded data in to a UIImage object
-                    picture = UIImage(data: data!)
-                    // Store the image in to our cache
+                if error == nil{
                     self.imageCache[pictureUrlString] = picture
+                    
                     // Update the cell
                     dispatch_async(dispatch_get_main_queue(), {
-                        cell.imageView.image = picture
+                        cell.imageView.image = picture as? UIImage
                         cell.activityIndicator.hidden = true
                         cell.activityIndicator.stopAnimating()
                         cell.imageView.alpha = 0.0
@@ -147,12 +143,14 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
                         
                         
                     })
+                    
+                    
                 }
                 else {
-                       self.showAlertView(" Unable to fetch  image for Music Leesons.Please check your Network connectivity ")
+                    self.showAlertView(" Unable to fetch  image for Music Leesons.Please check your Network connectivity ")
                 }
-            }
-            task.resume()
+            })
+            
         }
         
         
@@ -195,6 +193,7 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
         let controller =
         storyboard!.instantiateViewControllerWithIdentifier("SongDetailsVC")
             as! SongDetailsViewController
+        
         
         
         controller.lessonTitle = songs.title
@@ -246,6 +245,7 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
                     songDetails[SongDetails.Keys.songId] = songDetailsResult.identifier
                     
                     _ = SongDetails(dictionary: songDetails, context: self.sharedContext)
+                    
                     
                 }
                 
