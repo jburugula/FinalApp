@@ -53,7 +53,8 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
         
         do {
             try fetchedResultsController.performFetch()
-        } catch {}
+        } catch {
+         self.showAlertView(" No Music Lessons Found for this Cateogry. Please select Different Category ")}
         
         // this class is NSFetchedResultsControllerDelegate
         fetchedResultsController.delegate = self
@@ -148,7 +149,7 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
                     })
                 }
                 else {
-                    print("Error: \(error!.localizedDescription)")
+                       self.showAlertView(" Unable to fetch  image for Music Leesons.Please check your Network connectivity ")
                 }
             }
             task.resume()
@@ -249,6 +250,9 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
                 }
                 
                 self.saveContext()
+            }
+            else {
+                self.showAlertView(" Unable to fetch   Music Leesons.Please check your Network connectivity ")
             }
             
         }
@@ -391,7 +395,20 @@ class MusicLessonCollectionViewController: UICollectionViewController , NSFetche
         
     }
     
+    // Display Alert when no images retreived
     
+    func showAlertView(errorMessage: String?) {
+        
+        let alertController = UIAlertController(title: nil, message: errorMessage!, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .Cancel) {(action) in
+            
+        }
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true){
+            
+        }
+        
+    }
     
     
 }

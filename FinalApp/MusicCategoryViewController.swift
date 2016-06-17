@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class MusicCategoryViewController : UITableViewController,NSFetchedResultsControllerDelegate {
+class MusicCategoryViewController : UITableViewController,NSFetchedResultsControllerDelegate,GIDSignInUIDelegate {
     
     var userId: Int64!
     
@@ -25,9 +25,19 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let signOutButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Plain, target: self, action:#selector(MusicCategoryViewController.didTapSignOut(_:)) )
+        
+        self.navigationItem.rightBarButtonItem = signOutButton
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+
+        
         do {
             try fetchedResultsController.performFetch()
-        } catch {}
+        } catch {
+            self.showAlertView(" No Music Categories Found. Please check your Network Connection")
+            
+        }
         
         // this class is NSFetchedResultsControllerDelegate
         fetchedResultsController.delegate = self
@@ -54,14 +64,27 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
     }
     
     override func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let CellIdentifier = "CategoryTableViewCell"
-            let songCategories = fetchedResultsController.objectAtIndexPath(indexPath) as! MusicCategories
-            let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as!
-            CategoryTableViewCell
-            cell.nameLabel.text = songCategories.categoryName
-            return cell
-            
+                            cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let CellIdentifier = "CategoryTableViewCell"
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as!
+        CategoryTableViewCell
+        
+        // show activity indicator busy
+        cell.backgroundColor = UIColor.whiteColor()
+         cell.activityIndicator.color = UIColor.blackColor()
+        cell.activityIndicator.hidden = false
+        cell.activityIndicator.startAnimating()
+        
+        let songCategories = fetchedResultsController.objectAtIndexPath(indexPath) as! MusicCategories
+        
+        cell.nameLabel.text = songCategories.categoryName
+        cell.backgroundColor = UIColor.blackColor()
+        cell.activityIndicator.hidden = true
+        cell.activityIndicator.stopAnimating()
+        
+        return cell
+        
     }
     
     // Show list of songs for a selected category 
@@ -132,6 +155,10 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
                 
                 self.saveContext()
             }
+            else{
+                self.showAlertView(" Unable to retreive Music Categories . Please check your network connection")
+                
+            }
             
         }
         do_table_refresh()
@@ -195,6 +222,29 @@ class MusicCategoryViewController : UITableViewController,NSFetchedResultsContro
     }
     
  
-
+    // Display Alert when no images retreived
+    
+    func showAlertView(errorMessage: String?) {
+        
+        let alertController = UIAlertController(title: nil, message: errorMessage!, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .Cancel) {(action) in
+            
+        }
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true){
+            
+        }
+        
+    }
+    
+    // Sign out the User
+    
+    func didTapSignOut(sender: UIBarButtonItem) {
+        GIDSignIn.sharedInstance().signOut()
+        let logInPage = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let logInPageNav =  UINavigationController(rootViewController: logInPage)
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window?.rootViewController = logInPageNav
+    }
     
 }

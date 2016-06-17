@@ -24,7 +24,6 @@ class SongVideoPlayerController: AVPlayerViewController  ,NSFetchedResultsContro
         super.viewDidLoad()
     }
     
-    
     var sharedContext: NSManagedObjectContext {
         return CoreDataStackManager.sharedInstance().managedObjectContext
     }

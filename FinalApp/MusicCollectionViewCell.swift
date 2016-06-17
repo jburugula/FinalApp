@@ -21,9 +21,6 @@ class MusicCollectionViewCell : UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        if imageView.image == nil {
-            
-            activityIndicator.startAnimating()
-        }
+     
     }
 }
